@@ -1,0 +1,14 @@
+
+  .Cards {
+    padding:1rem;
+    margin-left: 36%;
+    margin-top: 10%;
+    border:1px solid #333;
+    box-shadow: 1px 1px 3px #333;
+    width: 25%;
+  }
+
+  .Tittle{
+    border-width: 80px;
+    height: 25px;
+  }
