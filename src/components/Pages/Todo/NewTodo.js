@@ -4,7 +4,7 @@ import { MdAdd } from 'react-icons/md';
 function NewTodo({ onChange, value, onAddNew}){
   return (
     <section className="TodoAddNew">
-      <section className="flex justify-between w-screen items-center px-4 border">
+      <section className="flex justify-between w-screen items-center px-4 border text-lg">
         <FormField
           type="text"
           id="txtNTodo"

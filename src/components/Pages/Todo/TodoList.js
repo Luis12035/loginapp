@@ -12,7 +12,7 @@ function TodoListItem({descripcion, id, completed, doneHandler, deleteHandler}){
 
   const myClass = (completed)?"striked": "";
   return (
-    <li>
+    <li className="flex flex-row border-black border-2 text-lg mt-2 mb-2 px-2 bg-green-300 bg-opacity-40 rounded-lg">
     <span className={myClass}>{descripcion}</span>
     <MdDone onClick={onClick}></MdDone>
     <MdDelete onClick={onDeleteClick}></MdDelete>
@@ -33,7 +33,7 @@ function TodoList({todos, doneHandler, deleteHandler}){
     )
   });
   return (
-    <section className="TodoList">
+    <section className=" border-black border-2 px-5">
       <ul>
          {todoItems}
       </ul>

@@ -11,6 +11,7 @@ function Login(){
     passwordError: ""
   });
 
+  const _self = this;
   const myOnChange = function(e){
     const { name, value } = e.currentTarget;
     //validaciones
@@ -22,27 +23,32 @@ function Login(){
     setFormData({ ...formData, [name]: value , [name + "Error"]: error});
   }
   return (
-    <Form>
-      <FormField
-        type="text"
-        id="username"
-        fname="username"
-        onChange={myOnChange}
-        caption="Correo Electrónico"
-        value={formData.username}
-        error={formData.usernameError}
-        placeholder="Tu correo"
-      ></FormField>
-      <FormField
-        type="password"
-        id="password"
-        fname="password"
-        onChange={myOnChange}
-        caption="Contraseña"
-        value={formData.password}
-        error={formData.passwordError}
-        placeholder="Contraseña"
-      ></FormField>
+    <section className="flex">
+      <Form>
+        <section>
+          <FormField
+          type="text"
+          id="username"
+          fname="username"
+          onChange={myOnChange}
+          caption="Correo Electrónico"
+          value={formData.username}
+          error={formData.usernameError}
+          placeholder="Tu correo"
+        ></FormField>
+          <FormField
+          type="password"
+          id="password"
+          fname="password"
+          onChange={myOnChange}
+          caption="Contraseña"
+          value={formData.password}
+          error={formData.passwordError}
+          placeholder="Contraseña"
+        ></FormField>
+        </section>
+      
+      <section className="pl-24 border-t-2 border-black">
       <FormAction
         caption="Enviar"
         onClick={
@@ -55,7 +61,11 @@ function Login(){
         }
       >
       </FormAction>
+      </section>
+      
     </Form>
+    </section>
+    
   );
 }
 

@@ -1,17 +1,49 @@
 import './App.css';
-
 import BrandHeader from './components/BrandHeader/BrandHeader';
-import Card from './components/Cards/Cards.js'
+import Login from './components/Cards/Cards';
+import Home from './components/Pages/Home';
+import Todo from './components/Pages/Todo/Todo';
+
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+//import Cards from './components/Cards/Cards';
+//import CardHolder from './components/Cards/CardHolder';
+//
+
+//import imgMeme from './assets/meme.jpg';
 
 function App() {
   return (
-    <section>
-      <BrandHeader></BrandHeader>
-      <section>
-        <Card></Card>
+    <Router>
+      <section className="w-screen h-screen">
+        <BrandHeader></BrandHeader>
+        <Switch>
+          <Route path="/" exact>
+              <Home />
+          </Route>
+          <Route path="/todos" exact>
+            <Todo />
+          </Route>
+          <Route path="/login" exact>
+              <Login></Login>
+          </Route>
+        </Switch>
       </section>
-    </section>
+    </Router>
   );
 }
 
 export default App;
+
+/*
+
+<section>
+        <img src={imgMeme} alt="Un meme" />
+      </section>
+      <CardHolder>
+        <Cards></Cards>
+        <Cards></Cards>
+        <Cards></Cards>
+        <Cards></Cards>
+      </CardHolder>
+
+*/

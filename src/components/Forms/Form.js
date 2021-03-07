@@ -1,9 +1,9 @@
 function Form({children}){
-    return (
-      <form className="flex justify-center items-start px-4 border">
-          {children}
-      </form>
-    );
-  }
-  
-  export default Form;
+  return (
+    <form className="px-4 w-full shadow-md">
+        {children}
+    </form>
+  );
+}
+
+export default Form;
